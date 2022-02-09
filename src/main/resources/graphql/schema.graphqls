@@ -1,5 +1,6 @@
 schema{
-    query : Query
+    query : Query,
+    mutation: Mutation
 }
 
 type Actor{
@@ -21,4 +22,7 @@ type Query{
         getAllActors:[Actor]
         actorCount:Int
         getActorByNameLike(actorName:String):Actor
+}
+type Mutation{
+    updateAddress(id:Int,address:String):Actor
 }
