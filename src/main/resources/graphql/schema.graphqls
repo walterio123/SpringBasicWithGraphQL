@@ -1,0 +1,24 @@
+schema{
+    query : Query
+}
+
+type Actor{
+    id              :ID!,
+    firstName:String,
+    lastName   :String,
+    dob            :String,
+     address    :String,
+     filmId       :Int,
+    film:Film
+}
+type Film{
+     filmId       :ID!,
+     name          :String,
+     lauchYear  :String
+}
+type Query{
+
+        getAllActors:[Actor]
+        actorCount:Int
+        getActorByNameLike(actorName:String):Actor
+}
